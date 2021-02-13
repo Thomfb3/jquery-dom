@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.css">
+    <style>
+        img {
+            max-width: 70%;
+        }
+
+        .image-center {
+            display: block;
+            margin: 10px auto;
+        }
+
+        .link {
+            padding: 20px;
+            text-decoration: underline;
+        }
+
+        .form-container {
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            padding: 20px;
+        }
+
+        .btn {
+            padding: 5px 15px;
+        }
+
+        .movie {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .table-header {
+            font-weight: bold;
+            color: #007bff;
+        }
+        p {
+            flex-basis: 150px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="link">jQuery Dom Part One</a>
+    <h1 id="title" class="text-center ">Movie Form</h1>
+    <div class="container form-container">
+
+        <form>
+            <div class="row mb-5 ">
+                <div class="col-md-5 offset-md-1 ">
+                    <label></label>
+                    <input class="form-control" id="movie-title" type="text" minlength="2" value="" placeholder="Movie Title">
+                </div>
+                <div class="col-md-5">
+                    <label></label>
+                    <input class="form-control" id="movie-rating" type="number" min="0" max="10" value="" placeholder="Rating: 0 - 10">
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-md-10 offset-md-1 text-right">
+                    <button id="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="container mt-5">
+            <button id="sort-az" class="btn btn-primary mb-3">Sort AZ</button>
+            <button id="sort-rating-H-to-L" class="btn btn-primary mb-3">Sort by Rating Highest to Lowest</button>
+            <button id="sort-rating-L-to-H" class="btn btn-primary mb-3">Sort by Rating Lowest to Highest</button>
+        <div class="pr-3 pl-3 d-flex d-flex justify-content-between movie">
+            <div class="table-header">Movie Title</div>
+            <div class="table-header">Rating</div>
+            <div class="table-header">Delete</div>
+        </div>
+    </div>
+
+    <div class="container" id="movie-container">
+
+        <!-- <div class="movie p-4 d-flex d-flex justify-content-between">
+            <p>Movie Title</p>
+            <p>10</p>
+            <button class="btn btn-danger">Delete</button>
+        </div> -->
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="movie-app.js"></script>
+</body>
+
+</html>
